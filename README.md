@@ -4,6 +4,10 @@
 
 A RESTful API for a blogging platform built with Node.js, Express.js, and MongoDB. This API allows users to create accounts, post content, and interact with posts through comments.
 
+## Postman collection
+
+https://web.postman.co/workspace/backend-courses~96521b08-be54-4009-81e1-9c86aa937e18/collection/40851069-ce382e55-0d02-4d96-bbc9-454e6dee6451?action=share&source=copy-link&creator=40851069
+
 ## Features
 
 - User management (create, read, update, delete users)
