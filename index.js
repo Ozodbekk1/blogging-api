@@ -7,6 +7,7 @@ import cors from "cors";
 import mongoose from "mongoose";
 import userRouter from "./routes/user.route.js";
 import postRouter from "./routes/post.route.js";
+import commentRoute from "./routes/comment.route.js";
 configDotenv();
 
 // Mongo DB Connections
@@ -27,6 +28,7 @@ app.use(express.json());
 
 app.use("/api/v1", userRouter);
 app.use("/api/v1", postRouter);
+app.use("/api/v1", commentRoute);
 
 app.get("/", (req, res) => {
   res.send("your api is live ");

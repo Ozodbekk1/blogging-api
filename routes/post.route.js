@@ -4,17 +4,18 @@ import { Router } from "express";
 import {
   createPost,
   deletePost,
-  deletePostComment,
-  getPost,
-  writeCommentToPost,
+  getPostById,
+  getPosts,
+  updatePost,
 } from "../controller/post.controller.js";
 
 const postRouter = Router();
 
-postRouter.post("/create/post", createPost);
-postRouter.delete("/:postId", deletePost);
-postRouter.post("/:postId/comments", writeCommentToPost);
-postRouter.delete("/:postId/comments/:commentId", deletePostComment);
-postRouter.get("/:postId", getPost);
+postRouter.post("/create/post", createPost); // passed
+postRouter.get("/get/posts", getPosts); // passed
+postRouter.get("/get/post/:postId", getPostById); // passed
+postRouter.put("/update/post/:postId", updatePost);
+
+postRouter.delete("/delete/post/:postId", deletePost); // passed
 
 export default postRouter;
